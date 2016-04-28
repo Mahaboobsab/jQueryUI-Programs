@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>   
+<head>
+   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	
+<style type="text/css">
+#spin1 input{width:100px}
+</style>
+<script>
+$(function()
+	{
+	$("#spin1").spinner();
+	$('button').button();
+	
+	
+	$("#but1").click(function()
+	{
+	$("#spin1").spinner('enable');
+	});
+	
+	$("#but2").click(function()
+	{
+	$("#spin1").spinner('disable');
+	});
+	
+	});
+</script>
+
+</head>
+<body bgcolor='pink'>
+<div id="div1">
+
+<input type="text" id="spin1" value="0"/><br><br>
+<button id='but1'>Enable</button>
+<button id='but2'>Desable</button>
+
+
+</div>
+</body>
+</html>

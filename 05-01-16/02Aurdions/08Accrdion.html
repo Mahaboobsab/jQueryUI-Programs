@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">  
+<head> 
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+  
+<script>  
+ $(function() {  
+            $( "#accordion ).accordion({  
+               disabled: false  
+            });  
+            $("input").each(function () {  
+               $(this).change(function () {  
+                  if ($(this).attr("id") == "disableButton") {  
+                     $("#accordion").accordion("option", "disabled", true);  
+                  } else {  
+                     $("#accordion").accordion("option", "disabled", false);  
+                  }  
+               });  
+            });  
+         }); 
+</script>  
+
+  <style>
+  #accordion
+	{
+	font-size:14px;
+	}
+  </style>
+  </head>
+  <body bgcolor='wheat'>
+
+  <div id="accordion">
+  
+    <h1 style='color:blue'>What is NeoRays</h1>
+  <div>
+  <p>NeoRays is the one of the best company in the bangalore having very good software engineers like Ravi Sir,amaresh,amit and Meheboob and we will give the product in very low cost</p>
+  </div>
+  
+    <h2 style='color:blue' >Whay NeoRays...?</h2>
+  <div>
+  <p>Near to bustStand and very good products</p>
+  </div>
+  
+    <h3 style='color:blue'>Where is NeoRays..?</h3>
+  <div>
+  <p>Basaveshwar Nagar Bengaluru-591110</p>
+  </div>
+  
+    <h4 style='color:blue'>Specialty of NeoRays</h4>
+  <div>
+  <ul>
+  <li>Best Engineers</li>
+  <li>Best Computers</li>
+  <li>Best CEO</li>
+  <li>Best Managers</li>
+  <li>Best Teamleader</li>
+  </ul>
+  </div>
+  
+  </div>
+  
+  <div style="margin-top:30px">
+  <input type='radio' name='disable' id='disableButton' value='disable'>Disable Accordion
+  <input type='radio' name='enable' id='enableButton' value='enable'>enable Accordion
+  </div>
+  
+   </body>
+  </html>

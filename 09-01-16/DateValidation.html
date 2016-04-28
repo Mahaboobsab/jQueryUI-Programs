@@ -1,0 +1,55 @@
+<!doctype html>  
+<html>  
+   <head>  
+     
+     
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+      <script src="../../Scripts/jquery.ui.datepicker.validation.js" type="text/javascript"></script>	  
+  
+    
+      <script>  
+	  $("document").ready(function(){
+	 
+	    
+		   $("#datepicker2").datepicker({appendText:"(mm/dd/yy)"  ,
+		   
+    onClose: 
+	function(dateText, instance) {
+	$("#but1").click(function(){
+	
+        var date;
+        try {
+            date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, dateText, instance.settings);
+        }
+        catch (e) {
+            alert(" This date is not valid");
+			window.location.reload(true);
+			return;
+			 
+        }
+		
+      if (date) {
+            alert(date+" This date  valid");
+           window.location.reload();
+        } 
+		});
+		
+		return;
+		
+    }
+
+});
+         
+		 });
+      </script>  
+   </head>  
+   <body bgcolor='wheat'>  
+     
+	  <h1 style="color:blue">Date Validation With Calender</h1>
+      <p style="color:orange">Please Enter Date: <input type="text" id="datepicker2"></p> 
+<button id="but1">Submit</button>	  
+	  
+   </body>  
+</html>  

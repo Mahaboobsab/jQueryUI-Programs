@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+  <style>
+  #ol1
+  {
+  list-style-type:none;
+  margin:0;
+  width:25%;
+  }
+  #ol1 li
+  {
+  margin: 5px 3px 3px 3px; padding:0.4em; padding-left:1.5em; font-size:17px; height:16px; 
+  }
+  .default
+  {
+  background:green;
+  border:1px solid red;
+  color:orange;
+  width:150px;
+  }
+  </style> 
+  <script>
+  $(function()
+  {
+  $("#ol1").sortable();
+  });
+  </script>
+</head>
+<body bgcolor='wheat'>
+<h1 style='color:blue'>Newly joined empolyees</h1>
+<ul id="ol1">
+<li class="default">Meheboob</li>
+<li class="default">Khadhir</li>
+<li class="default">Priyanka</li>
+<li class="default">Anusha</li>
+<li class="default">Bhagya</li>
+<li class="default">Nadaf</li>
+</ul>
+</body>
+</html>

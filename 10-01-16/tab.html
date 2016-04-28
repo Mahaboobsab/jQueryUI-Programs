@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 
+ <script type="text/javascript">
+  jQuery(document).ready(function() {
+    var $tabs = $('#tabs').tabs({ selected: 0 }); 
+    $tabs.tabs('option', 'selected', 0);
+    $("#tabs").tabs({disabled: [1,2]});
+    $("#addstudent").click(function(){
+        $tabs.tabs('option', 'selected', 1);
+        $("#tabs").tabs({disabled: [0,2]});
+    }); 
+    $("#confirm").click(function(){
+        $tabs.tabs('option', 'selected', 2);
+        $("#tabs").tabs({disabled: [0,1]});
+    }); 
+  });
+  </script>
+</head>
+<div id="tabs">
+    <ul>
+        <li><a href="#fragment-1">Student Information</a></li>
+        <li><a href="#fragment-2">Confirmation</a></li>
+        <li><a href="#fragment-3">Invoice</a></li>
+    </ul>
+    <div id="fragment-1">
+        <button id="addstudent" >Add Student</button>
+    </div>
+    <div id="fragment-2">
+        <button id="confirm" >Confirm</button>
+    </div>
+    <div id="fragment-3">
+        tab 3, index 2
+    </div>
+</div>
+</html>

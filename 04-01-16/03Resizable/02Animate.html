@@ -1,0 +1,61 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <style>
+	  #h1
+	  {
+	  background-color:blue;
+	  border:2px solid green;
+	  font-weight:bold;
+	  text-align:center;
+	  }
+	  #div1
+	  {
+	  background-color:pink;
+	  height:250px;
+	  width:250px;
+	  border:2px solid brown;
+	  margin:5px;
+	  }
+	  
+	   #h2
+	  {
+	  background-color:orange;;
+	  border:2px solid blue;
+	  font-weight:bold;
+	  text-align:center;
+	  }
+	  #div2
+	  {
+	  background-color:yellow;
+	  height:220px;
+	  width:250px;
+	  border:2px solid red;
+	  margin:5px;
+	  }
+	  </style>
+  </head>
+  <body bgcolor='wheat'>
+  <div id='div1'>
+  <h1 id='h1'>I am desabled!!!</h1>
+  </div><br/><br/><br/>
+  <div id='div2'>
+  <h2 id='h2'>I destroyed!!!!</h2>
+  </div>
+  <script>
+  $(function()
+  {
+  $("#div1").resizable();
+  $("#div1").resizable('disable');
+	$("#div2").resizable();
+	$("#div2").resizable('distroy');
+  }
+		
+		);
+  
+  </script>
+  </body>
+  </html>

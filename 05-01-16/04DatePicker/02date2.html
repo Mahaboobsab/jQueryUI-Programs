@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	 
+	 <script>
+	 $(function()
+	 {
+	 $("#date").datepicker({
+	 appendText:"(dd-mm-yy)",
+	 dateFormat:"dd-mm-yy",
+	 altField:"#date2",
+	 altFormat:"DD,d MM,yy"
+	 });
+	 });
+	 </script>
+</head>
+<body bgcolor='wheat'>
+<p>Ente date<input type="text" id="date"></p><br>
+<p>Alternate date:<input type="text" id="date2" style='width:14%'></p>
+
+</body>
+</html> 
+
+ 

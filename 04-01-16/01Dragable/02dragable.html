@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+</head>
+
+<body bgcolor='wheat'>
+<div id='div1' style="border:solid 1px;background-color:pink;">
+<span>I am not movable<br><br></span>
+</div><br>
+<div id='div2' style='border:1px solid red;background-color:orange;'>
+<span>I will start moving after 50 px only</span><br></br>
+</div><br>
+<div id='div3' style='border:1px solid green; background-color:yellow;'>
+<span><p> I will start move after 500 ms</p></span>
+</div>
+<br>
+<div id='clone' style='border:1px solid blue; background-color:yellowgreen'>
+<span><p>you can clone me...</p></span>
+</div>
+<script>
+$("#div1 span").draggable
+	(
+	
+	{
+	disabled:true
+	}
+	);
+$("#div2 span").draggable
+	(
+	{
+	distance:50
+	}
+	);
+$("#div3 span").draggable
+	(
+	{
+	delay:300
+	}
+	);
+	$("#clone span").draggable
+		(
+		{
+		helper:"clone"
+		}
+		);
+</script>
+</body>
+</html>

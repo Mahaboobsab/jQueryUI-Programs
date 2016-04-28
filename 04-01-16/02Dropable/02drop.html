@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+<style>
+#drag
+{
+height:50px;
+width:100px;
+background-color:lightgreen;
+padding:0.5em;
+margin:0px 5px 10px 0;
+text-align:center;
+}
+#drop1,#drop2,#drop3,#drop4
+{
+
+height:120px;
+width:150px;
+
+background-color:orange;
+padding:0.5em;
+margin:10px;
+text-align:center;
+float:left;
+}
+</style>	  
+ </head>
+ <body bgcolor='wheat'>
+ <div id='drag'>
+ <p>Drag it to any boxes</p>
+ </div>
+ 
+  <div id='drop1'>
+ <p>Drop here!!!</p>
+ </div>
+ 
+  <div id='drop2'>
+ <p>Dont Drag it here I am dusabled</p>
+ </div>
+ 
+  <div id='drop3'>
+ <p>Tolerence touch!Drop to touch the boudry</p>
+ </div>
+  <div id='drop4'>
+ <p>Tolerence fit!! dro within the box</p>
+ </div>
+ <script>
+ $(function() {  
+            $( "#drag" ).draggable();  
+            $( "#drop1" ).droppable({  
+            drop: function( event, ui ) 
+			{  
+               $( this )  
+               .addClass( "ui-state-highlight" )  
+               .find( "p" )  
+               .html( "Dropped!" );  
+            }  
+			 });
+			 
+			 $("#drop2").droppable(
+			 {
+			 disabled:"true",
+			 drop:function(event,ui)
+			 {
+			 $(this).addClass("ui-state-highlight").find("p").html("Dropped!!!");
+			 }
+			 
+			 });
+			 
+			  $("#drop3").droppable(
+			 {
+			tolerance:'touch',
+			 drop:function(event,ui)
+			 {
+			 $(this).addClass("ui-state-highlight").find("p").html("Drop with a touch");
+			 }
+			 
+			 });
+			  $("#drop4").droppable(
+			 {
+			tolerance:'fit',
+			 drop:function(event,ui)
+			 {
+			 $(this).addClass("ui-state-highlight").find("p").html("Drop with a touch");
+			 }
+			 
+			 });
+         });
+ </script>
+ </body>
+ </html>

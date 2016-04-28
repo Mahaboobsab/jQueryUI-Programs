@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+<style>
+#drag
+	{
+	height:100px;
+	width:100px;
+	padding:0.5em;
+	background-color:yellowgreen;
+	text-align:center;
+	margin:10px;
+	}
+#drop
+	{
+	float:left;
+	height:200px;
+	width:200px;
+	background-color:lightblue;
+	
+	padding:0.5em;
+	text-align:center;
+	margin:22px 12px 10px 0;
+	
+	}
+</style>
+</head>
+<body bgcolor='wheat'>
+<div id=drag>
+<p>MEHEBOOB NADAF</p>
+</div><br><br>
+<div id='drop'>
+<p>WelCome to NeoRays</p>
+</div>
+<script>
+$("#drag").draggable();
+$("#drop").droppable();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,142 @@
+<!doctype html>  
+<html>  
+
+    <head>  
+	
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	  
+	   <script>
+	  $(document).ready(function(){
+   $("#2ndSEM").click  (function(){
+  if( $('2ndSem:hidden '))
+  {
+  alert("save the first sem firstzzzzzzzzzz!");
+  }
+     
+   });
+ });
+	  </script>
+
+	  <script>
+	  $("document").ready(function()
+	  
+	  {
+	   var $mainTab = $('#mainTab').tabs({ selected: 0 }); 
+	   $mainTab.tabs('option', 'selected', 0);
+	   $("#mainTab").tabs({disabled: [1,2]});
+	   
+	   $("#1stSEM").click(function(){
+	   
+	    $mainTab.tabs('option', 'selected', 0);
+        $("#mainTab").tabs({disabled: [1,2]});
+      
+       });
+	  
+	   
+	   
+	//   $("#2ndSEM").click(function(){
+	//   alert('Please save the first Sem!');
+      
+     //  });
+			
+       $("#3rdSEM").click(function(){
+      alert('Please save the Second Sem!');
+	   }); 
+	    
+	   
+	   $("#1stSemSave").click(function(){
+        $mainTab.tabs('option', 'selected', 1);
+		//window.alert=function(){};
+        $("#mainTab").tabs({disabled: [2]});
+		});
+		
+		
+	   $("#2ndSemsave").click(function(){
+        $mainTab.tabs('option', 'selected', 2);
+		 $("#mainTab").tabs({disabled: [3]});
+		 
+		 $("#2ndSEM").click(function(){
+	   
+	    $mainTab.tabs('option', 'selected', 1);
+        $("#mainTab").tabs({disabled: [2]});
+      
+       });
+      
+       });
+	   
+	   
+	   $("#3rdSemsave").click(function(){
+        $mainTab.tabs('option', 'selected', 2);
+		  
+	   $("#2ndSEM").click(function(){
+	   
+	    $mainTab.tabs('option', 'selected', 1);
+        $("#mainTab").tabs({disabled: [2]});
+      
+       });
+      
+       });
+		});
+	   
+	  
+	  
+	  </script>
+	  
+	  
+	 
+	  
+	  
+	  <style>  
+         #mainTab{font-size: 14px;height:300px;
+			width:400px;}  
+         .ui-widget-header {  
+            background:lightpink;  
+            border: 1px solid #b9cd6d;  
+            color: lightyellow;  
+            font-weight: bold;  
+			
+         }  
+      </style>  
+	  
+	  
+	  
+	</head>
+	
+	
+	
+<body bgcolor='pink'> 
+<h1 style="color:blue">Enter Student details</h1>
+
+<div id="mainTab">
+  
+         <ul>  
+            <li><a href="#1stSem" id="1stSEM">1stSEM</a></li>  
+            <li><a href="#2ndSem" id="2ndSEM"  >2ndSEM</a></li> 
+            <li><a href="#3rdSem" id="3rdSEM">3rdSEM</a></li>  
+         </ul> 
+		 
+		 
+		 
+		 <div id="1stSem">  
+            Student name: <input type="text">
+			<button id="1stSemSave">1stSemSave</button>
+         </div>  
+		 
+		 <div id="2ndSem">  
+		<p>Enter Class</p>  
+		<input type="text">
+		<button id="2ndSemsave">2ndSemsave</button>
+         </div>  
+		 
+		 <div id="3rdSem">  
+		<p>Enter Marks</p>  
+		<input type="text">
+		<button id="3rdSemsave">3rdSemsave</button>
+         </div> 
+		 
+</div>
+		 
+</body>  
+</html>

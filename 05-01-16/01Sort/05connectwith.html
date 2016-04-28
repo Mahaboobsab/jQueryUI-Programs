@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+  <style>
+  #teamA,#teamB,#teamC
+  {
+  list-style-type:none;
+  margin:0;
+  width:25%;
+  }
+  #teamA li,#teamB li,#teamC li
+  {
+  margin: 5px 3px 3px 3px; padding:0.4em; padding-left:1.5em; font-size:17px; height:16px; 
+  }
+  
+  .highlight
+  {
+  background-color:pink;
+   font-weight:bold;
+  border:2px solid blue;
+  width:150px;
+  }
+  
+  .default
+  {
+  background:green;
+  border:1px solid red;
+  color:orange;
+  width:150px;
+    }
+  
+
+  </style> 
+  <script>
+  $(function()
+  {
+  $("#teamA,#teamB").sortable({connectWith:"#teamA,#teamB"});
+ 
+  
+  $(function()
+  {
+  $("#teamC").sortable({connectWith:"#teamA",dropOnEmpty:true});
+  });
+   });
+  </script>
+</head>
+<body bgcolor='wheat'>
+<h1 style='color:blue'>Team A</h1>
+<ul id="teamA">
+<li class="default">Meheboob</li>
+<li class="default">Khadhir</li>
+<li class="default">Priyanka</li>
+<li class="default">Anusha</li>
+<li class="default">Bhagya</li>
+<li class="default">Nadaf</li>
+</ul><br><br>
+
+<h2 style='color:blue'>Team B</h2>
+<ul id="teamB">
+<li class="default">Meheboobpaghya</li>
+<li class="default">soumya</li>
+<li class="default">Anjaney</li>
+<li class="default">swami</li>
+
+</ul>
+
+<h3 style='color:blue'>Team C</h3>
+<ul id="teamC">
+<li class="default">Ravi Sir</li>
+<li class="default">Amit Sir</li>
+<li class="default">Amaresh</li>
+<li class="default">Vinay</li>
+
+</ul>
+</body>
+</html>

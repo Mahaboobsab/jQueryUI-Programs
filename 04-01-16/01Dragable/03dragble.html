@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+</head>
+
+<body bgcolor='wheat'>
+<div id='div1' style="border:solid 1px;background-color:pink;height:30px;">
+<span>Click on me to see cursor type</span><br><br>
+<script>
+$("#div1 span ").draggable();
+$("#div1 span ").bind('click',function(event)
+	{
+	var cursor = $("#div1 span ").draggable('option','cursor');
+	var cursorAt = $("#div1 span").draggable('option','cursorAt');
+	alert("cursor type - "+cursor+"cursorAt - "+cursorAt);
+	});
+</script>
+</div>
+</body>
+</html>

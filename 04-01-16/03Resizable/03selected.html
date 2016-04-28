@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+<style>
+#selectable-1.ui-selecting{background:gray};
+ #selectable-1.ui-selected{background:yellow;color:green;}
+ #selectable-1{list-style-type:none;margin:0;padding:0; width:20%;}
+		
+	 #selectable-1 li{margin:3px;padding:0.4em; font-size:16px;height:18px;}
+		#li1{background:pink;border:1px solid white;color:blue;}
+</style> 
+<script>
+ $(function()
+	{
+	$("#ol1").selectable();
+	});	  
+</script>
+</head>
+ <body bgcolor='wheat'>
+ <ol id='ol1'>
+ <li id="li1">list1</li>
+  <li id="li1">list2</li>
+   <li id="li1">list3</li> 
+   <li id="li1">list4</li>
+    <li id="li1">list5</li>
+	 <li id="li1">list6</li>
+	  <li id="li1">list7</li>
+	   <li id="li1">list8</li>
+ </ol>
+
+
+
+ </body>
+</html> 
+

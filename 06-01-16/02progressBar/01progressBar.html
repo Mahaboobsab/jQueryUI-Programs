@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+
+<style>
+.ui-widget-header
+{
+background:orenge;
+border:1px solid red;
+color:green;
+font-weight:bold;
+}
+</style>
+	  
+	 <script>
+	 $(function()
+	 {
+	 for (var i=0;i<101;i++)
+	 {
+	 
+	 	 
+	 
+	 $("#div1").progressbar({
+
+	 
+	
+	  value:i
+
+	
+	 } ). delay(6000);
+	 }
+	
+	 });
+	 </script>
+</head>
+<body bgcolor='wheat'>
+
+<div id="div1"></div>
+</body>
+</html>
+ 

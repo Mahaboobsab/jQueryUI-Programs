@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>   
+<head>
+   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	
+<style type="text/css">
+#spin1 input{width:100px}
+</style>
+<script>
+$(function()
+	{
+	$("#spin1").spinner();
+	$('button').button();
+	
+	
+	$("#but1").click(function()
+	{
+	$("#spin1").spinner("stepUp");
+	});
+	
+	$("#but2").click(function()
+	{
+	$("#spin1").spinner("stepDown");
+	});
+	
+	
+	$("#but3").click(function()
+	{
+	$("#spin1").spinner("pageUp");
+	});
+	
+	
+	$("#but4").click(function()
+	{
+	$("#spin1").spinner("pageDown");
+	});
+	
+
+	});
+</script>
+
+</head>
+<body bgcolor='pink'>
+<div id="div1">
+
+<input type="text" id="spin1" value="0"/><br><br>
+<button id='but1'>Increment</button>
+<button id='but2'>Decrement</button>
+<button id='but3'>Page Up</button>
+<button id='but4'>Page Down</button>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+ <!DOCTYPE html> 
+ <html>
+ <head>
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+
+<style>
+ .ui-widget-header,.ui-state-default, ui-button
+ {
+ background:orange;
+ color:blue;
+ border:1px solid red;
+ font-weight:bold;
+ }  
+</style>	  
+	  
+ <script>
+	  $(function()
+	  {
+	  $("#dialog").dialog({autoOpen:false,
+	 buttons:{
+	 OK:function(){$(this).dialog("close");}
+	 
+	 },
+	 title:"Movei Title:happy New year",
+	 position:{
+	 my:"left center",
+	 	 at:"left center"
+	 }
+	  
+	  
+	  });
+	  
+	  
+	  
+	  $("#opener").click(function()
+	  {
+	  $("#dialog").dialog("open")
+	  });
+	  
+	  });
+ </script>
+	  
+	  </head>
+	  <body bgcolor='wheat'>
+	  <div id='dialog' title="Happy New Year ">Haroo to Harooo lekin Izzat mattt Utarooooo Essus me...
+	  </div>
+	  <button id='opener'>Open Dialog</button>
+	  </body>

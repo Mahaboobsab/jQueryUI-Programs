@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	  
+	  <script>
+	  $(function()
+	  {
+	  $("#div1").slider({
+	  orientation:"horizontal"
+	   });
+	  $("#div2").slider();
+	   
+	   $("#div1").slider({
+	  orientation:"horizontal",
+	  value:50,
+	  slide:function(evenet,ui)
+	  
+	  {
+	  $("#minval").val(ui.value);
+	  }
+	   
+	   });
+	   
+	   $( "#minval" ).val( $( "#div2" ).slider( "value" ) );  
+	  });
+	  </script>
+  
+</head>
+<body bgcolor='wheat'>
+<p>
+<label for="minval">Minimum Val : </label>
+<input type="text" id="minval"
+style="border:0;color:orange;font-weight:bold";/>
+</p>
+
+
+<div id="div1"></div><br>
+<div id="div2"></div>
+
+</body>
+</html>
+
+  

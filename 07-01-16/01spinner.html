@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>   
+<head>
+   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	
+<style type="text/css">
+#spin1,#spin2 input{width:100px}
+</style>
+<script>
+$(function()
+	{
+	$("#spin1").spinner(
+	{
+	min:-50,
+	max:50
+	});
+	
+	
+	//$("#spin2").spinner({disabled:true});
+	
+	//$("#spin2").spinner({icons:{ down: "ui-icon-triangle-3-s", up: "ui-icon-triangle-3-n" }});
+	
+	$("#spin2").spinner({page:10});
+	
+	});
+</script>
+
+</head>
+<body bgcolor='pink'>
+<div id="div1">
+Spinner Min, Max value set :
+<input type="text" id="spin1" value="0"/><br><br>
+Spinner increment or decrement in steps of 1000:
+<input type="text" id="spin2" value="0"/>
+</div>
+</body>
+</html>

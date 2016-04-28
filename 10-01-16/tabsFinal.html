@@ -1,0 +1,126 @@
+<!doctype html>  
+<html>  
+   <head>  
+        
+     
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	  
+	  
+      <script>  
+         $("document").ready(function() {  
+              var $tabs = $('#tabs-1').tabs({ selected: 0 }); 
+			  $tabs.tabs('option', 'selected', 0);
+			  $("#tabs-1").tabs({disabled: [1,2]});
+    
+	$("#but2").click(function(){
+	alert('Please save the first Sem!');
+ window.location.relaod(true);
+ return;
+});
+			
+$("#but3").click(function(){
+  alert('Please save the Second Sem!');
+  
+});
+          
+        $("#save1").click(function(){
+        $tabs.tabs('option', 'selected', 1);
+		window.alert = function() {};
+        $("#tabs-1").tabs({disabled: [2]});
+		});
+		
+		$("#but1").click(function(){
+			$tabs.tabs('option', 'selected', 0);     
+			window.alert=function(){};
+			$("#tabs-1").tabs({disabled: [1,2]})       
+			});
+			
+			
+			
+			
+		
+		
+		
+		
+		$("#but2").click(function()
+		
+		{
+		
+		$("#save2").click(function(){
+        $tabs.tabs('option', 'selected', 1);
+		window.alert = function() {};
+        $("#tabs-1").tabs({disabled: [2]});
+		
+		});
+		
+        $tabs.tabs('option', 'selected', 1);
+        $("#tabs-1").tabs({disabled: [2]});
+		
+		}); 
+		
+		
+$("#save2").click(function(){
+			$tabs.tabs('option', 'selected', 2);     
+			window.alert=function(){};
+		 $("#tabs-1").tabs({disabled: [4]});
+            window.location.relaod(true);
+		    return;			
+			});
+	
+			
+          
+	}); 
+
+
+</script>	
+
+<script>
+$("#but1").onclick (function(){
+			$tabs.tabs('option', 'selected', 0);     
+			//window.alert=function(){};
+			$("#tabs-1").tabs({disabled: [1,2]})       
+			});
+
+</script>
+
+	
+      <style>  
+         #tabs-1{font-size: 14px;height:300px;
+			width:400px;}  
+         .ui-widget-header {  
+            background:lightpink;  
+            border: 1px solid #b9cd6d;  
+            color: lightyellow;  
+            font-weight: bold;  
+			
+         }  
+      </style>  
+	  
+	  
+   </head>  
+   <body bgcolor='pink'>  
+   <h1 style="color:blue">Enter Student details</h1>
+      <div id="tabs-1">  
+         <ul>  
+            <li><a href="#tabs-2" id="but1">1st SEM</a></li>  
+            <li ><a href="#tabs-3" id="but2"  >2nd SEM</a></li> 
+            <li ><a href="#tabs-4" id="but3">3rd SEM</a></li>  
+         </ul>  
+         <div id="tabs-2">  
+            Student name: <input type="text">
+			<button id="save1">Save1</button>
+         </div>  
+         <div id="tabs-3">  
+<p>Enter Class</p>  
+<input type="text">
+			<button id="save2">Save2</button>
+         </div>  
+         <div id="tabs-4">  
+            <p>Successfully entered</p> 
+			
+         </div>  
+      </div> 	  
+   </body>  
+</html>  

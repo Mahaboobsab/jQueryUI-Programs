@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html>
+   <head>  
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+   </head>  
+   <body bgcolor='wheat'>
+   <div id='div1' style='border:1px solid red;background-color:blue;'>
+   <p><span>I am draggable(disabled)</span></p>
+   </div><br>
+    <div id='div2' style='border:1px solid blue;background-color:red;'>
+   <p><span>I am draggable(enabled)</span></p>
+   </div>
+   <script>
+   $("#div1 span").draggable();
+   
+    $("#div1 span").draggable('disable');
+	
+   $("#div2 span").draggable();
+   
+   $("#div2 span").draggable('enable');
+   </script>
+</body>
+</html>   

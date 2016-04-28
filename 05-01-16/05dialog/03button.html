@@ -1,0 +1,37 @@
+ <!DOCTYPE html> 
+ <html>
+ <head>
+  <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+
+<style>
+ .ui-widget-header,.ui-state-default, ui-button
+ {
+ background:orange;
+ color:blue;
+ border:1px solid red;
+ font-weight:bold;
+ }  
+</style>	  
+	  
+ <script>
+	  $(function()
+	  {
+	  $("#dialog").dialog({autoOpen:false,hide:"slide",show:"slide",height:300});
+	  
+	  
+	  $("#opener").click(function()
+	  {
+	  $("#dialog").dialog("open")
+	  });
+	  
+	  });
+ </script>
+	  
+	  </head>
+	  <body bgcolor='wheat'>
+	  <div id='dialog' title="Happy New Year 2016">This year is your's meheboob...
+	  </div>
+	  <button id='opener'>Open Dialog</button>
+	  </body>

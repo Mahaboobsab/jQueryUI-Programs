@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>NOTEPAD</title>
+    <style>
+        textarea {
+            font-family: monospace;
+        }
+        p {
+            font-size: 20px;
+        }
+        .bigbutton {
+            width: 200px;
+            height: 50px;
+            font-size: 35px;
+            background-color: blue;
+        }
+        div.size {
+            width: 1285px;
+            height: 530px;
+            padding: 5px;
+            margin: 0px;
+            color: black;
+            float: right;
+            text-align: left;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <p>TITLE:
+        <input type="text" name="title" size="209" style="float:right">
+    </p>
+    <div class="size">
+        <textarea rows="18" cols="84" style="font-size:25px;">Try out Tab Override on this textarea element. Use the tab key to add a tab character. Use shift+tab to remove tabs. You can select multiple lines to shift them left and right.</textarea>
+    </div>
+    <div style="float:right;">
+        <input type="submit" value="RESET" name="reset" class="bigbutton">&nbsp&nbsp
+        <input type="submit" value="SAVE" name="save" class="bigbutton">
+    </div>
+    <script src="taboverride.min.js"></script>
+    <script>
+        tabOverride.set(document.getElementsByTagName('textarea'));
+    </script>
+</body>
+
+</html>
